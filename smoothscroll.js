@@ -1,21 +1,14 @@
-const menuLinks = document.querySelectorAll('.menu a[href^="#"]'); // class of the navegation menu
+const menuLinks = document.querySelectorAll('.menu a[href^="#"]')
 
 function getDistanceFromTheTop(element) {
     const id = element.getAttribute("href");
     return document.querySelector(id).offsetTop;
 }
 
-// function nativeScroll(distanceFromTheTop) {
-//     window.scroll({
-//         top: distanceFromTheTop,
-//         behavior: "smooth",
-//     });
-// }
-
 function scrollToSection(event) {
     event.preventDefault();
-    const distanceFromTheTop = getDistanceFromTheTop(event.target) - 90; // - (numero) = the margin in px that will give in relation to the link
-    smoothScrollTo(0, distanceFromTheTop, 600); // (distanceX, distanceY, animation intervall)
+    const distanceFromTheTop = getDistanceFromTheTop(event.target) - 90;
+    smoothScrollTo(0, distanceFromTheTop, 600);
 }
 
 menuLinks.forEach((link) => {
@@ -29,7 +22,7 @@ function smoothScrollTo(endX, endY, duration) {
     const distanceY = endY - startY;
     const startTime = new Date().getTime();
 
-    duration = typeof duration !== "undefined" ? duration : 400; // native interval
+    duration = typeof duration !== "undefined" ? duration : 400;
 
     const easeInOutQuart = (time, from, distance, duration) => {
         if ((time /= duration / 2) < 1)
