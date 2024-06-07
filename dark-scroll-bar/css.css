@@ -1,0 +1,24 @@
+::-moz-scrollbar {
+    width: 10px;
+}
+
+::-moz-scrollbar-thumb {
+    background-color: #2f2f2f;
+}
+
+::-moz-scrollbar-track {
+    background-color: #1f1f1f;
+}
+
+/* Webkit (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #2f2f2f;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #1f1f1f;
+}
